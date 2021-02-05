@@ -5,23 +5,23 @@ const createRouter = require('./router');
 const router = createRouter();
 
 router.get('/', () => {
-    return 'This is our root handler';
+  return 'This is our root handler';
 });
 
 router.post('/users', () => {
-    return 'This would create a new user';
+  return 'This would create a new user';
 });
 
 router.put('/users/1', () => {
-    return 'This would update a current user';
+  return 'This would update a current user';
 });
 
 router.del('/users/1', () => {
-    return 'This would delete the user with id 1';
+  return 'This would delete the user with id 1';
 });
 
 router.error(() => {
-    return 'The route you requested does not exist';
+  return 'The route you requested does not exist';
 });
 
 // We should get a correct response from these calls
@@ -40,4 +40,9 @@ const invalidPutResponse = router.dispatch('GET', '/cat/1');
 const invalidDelResponse = router.dispatch('GET', '/turtles/2');
 
 // This should print the same error message for all
-console.log(invalidGetResponse, invalidPostResponse, invalidPutResponse, invalidDelResponse);
+console.log(
+  invalidGetResponse,
+  invalidPostResponse,
+  invalidPutResponse,
+  invalidDelResponse
+);
