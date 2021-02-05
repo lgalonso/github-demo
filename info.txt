@@ -1,0 +1,57 @@
+# Instructions
+
+(I'd recommend doing the first exercise as it will hopefully increase your
+understanding of the routing mechanism in Express, and routing in general).
+
+For this exercise you are going to create a mini JSON API with the web framework
+Express (https://expressjs.com).
+
+This exercise has two parts: the first part is creating a regular HTML page
+(with some minor CSS and JS) and the second part is the JSON API.
+
+## Part 1:
+
+Create a route ("/") that serves the user with an HTML page. This page should
+include some CSS and JS. The amount of CSS and JS is up to you, as long as the
+users are able to visit the page and have CSS and JS being served from your
+server thats enough. Which means the contents of this page could mearly be
+copied from another site, just so you get some text that you can style (CSS) and
+perhaps some button that does something (JS).
+
+Read more about serving static files here:
+https://expressjs.com/en/starter/static-files.html
+
+## Part 2:
+
+This part will consist of you creating a mini JSON API. All of the data should
+be stored within a local JSON file (the implementation for this is up to you).
+
+* Route
+    - GET "/users", this should return an array of users (not all properties, only
+      the username and id for each user)
+    - GET "/users/:id", this should return a user (all properties)
+    - POST "/users", this should create a new user and then return the user
+      (including the newly generated id)
+    - PUT "/users/:id", this should edit the properties of a user and then
+      return the edited user
+    - DELETE "/users/:id", this should delete a user and only return the id
+
+All changes (POST, PUT and DELETE) should also be made in the JSON file.
+
+A user should have the following properties:
+
+User { id, username, email, phone }
+
+Read more about the ":id" parts of the endpoints here:
+https://expressjs.com/en/guide/routing.html#route-parameters
+
+---
+
+Testing your API can be cumbersome, I'd recommend using an App for sending and
+receiveing requests more easily. For example:
+
+* Insomnia: https://insomnia.rest/download/core/?
+
+Good luck!
+
+/Sebastian
