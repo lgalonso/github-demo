@@ -4,6 +4,7 @@ const createRouter = require('./router');
 // this should return us with an object containing the methods seen below.
 const router = createRouter();
 
+// Here we basically define the routes for our server and what they should return?
 router.get('/', () => {
   return 'This is our root handler';
 });
@@ -44,5 +45,5 @@ console.log(
   invalidGetResponse,
   invalidPostResponse,
   invalidPutResponse,
-  invalidDelResponse
+  invalidDelResponse,
 );
